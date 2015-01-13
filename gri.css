@@ -1,0 +1,628 @@
+/************************************************************************
+ *    NAME: gri.css							*
+ *  AUTHOR: Kevin Cole <kevin.cole@gallaudet.edu>			*
+ *   WHERE: Gallaudet Research Institute, Washington, DC 20002-3695	*
+ * LASTMOD: 2008.01.11							*
+ * PURPOSE: This is the cascading style sheet (CSS) for several GRI	*
+ *	    web pages.  It's meant to be a general template to work	*
+ *	    from.  It's still in the early stages.			*
+ *   USAGE: <html>							*
+ *	    <head>							*
+ *	    <link rel="stylesheet"					*
+ *		  type="text/css"					*
+ *		  href="gri.css" />					*
+ *	    ...								*
+ *									*
+ * NOTES, REVISIONS, ETC:						*
+ * I'm not thrilled with the results of using "small", "x-small", etc	*
+ * for font-size.  So, I'm going with more absolute values.  Normal is	*
+ * 11pt, Large is 12pt, and Small is 9pt.				*
+ * 16px, Large is 22px, and Small is 11px.
+ *									*
+ * Color Notes:		#ffffff = White		#000000 = Black		*
+ *			#191970 = MidnightBlue	#000080 = Navy		*
+ *									*
+ * Backgrounds:		#f5f5dc = Beige					*
+ *			#eef7ff = Light Blue	#ffdddd = Pink		*
+ *			#fafad2 = Yellow	#efefef = Grey		*
+ *									*
+ *									*
+ * Copyright (c) 2008 Kevin Cole <kevin.cole@gallaudet.edu>		*
+ ************************************************************************/
+
+/*******************
+ * Global settings *
+ *******************/
+
+/************************************************************************
+ * body, p, table, td, th {position:		relative;		*
+ ************************************************************************/
+
+@page {
+	size:			8.5in 11in;
+}
+
+body {
+	background-color:	#ffffff;
+	color:			#000000;
+	font-family:		Verdana, Arial, Helvetica, sans-serif;
+	font-size:		16px;
+}
+
+p {
+	margin:			auto auto 8px auto;
+	direction:		ltr;
+	widows:			2;
+	orphans:		2;
+}
+
+hr {
+      border: 0;
+      width:  60%;
+      height: 1px;
+      color:            #000000;
+      background-color: #000000;
+    }
+
+table, tbody,
+th, tr, td     {
+                border: 1px solid #000000;
+                border-collapse: collapse;
+                padding: 3px;
+               }
+
+div.navbar     {top:               0;
+                left:              0;
+                width:          100%;
+                position:       fixed;
+                text-decoration:  none;
+                font-size:        11px;
+                display:        table;}
+div.navbar p   {display:        table-cell;
+                text-decoration:  none;
+                font-size:        11px;
+                vertical-align: middle;}
+div.navbar img {display: block;
+                text-decoration:  none;
+                font-size:        11px;
+                margin:  1em auto;}
+div.navbar map
+               {text-decoration:  none;
+                font-size:        11px;}
+div.navbar area
+               {text-decoration:  none;
+                font-size:        11px;}
+
+div.masthead     {width:   100%;}
+div.masthead img {display: block;
+                  margin:  5px auto;}
+
+a {
+	color:			#0000ef;
+}
+
+input, select, textarea {
+	font-family:		fixed;
+}
+
+a.nice {
+	text-decoration:	none;
+	color:			#0000ef;
+}
+
+a.nice:active {
+	text-decoration:	none;
+	color:			#ff0000;
+}
+
+a.nice:link:hover {
+	text-decoration:	none;
+	background-color:	#bbeeff;
+	color:			#ff0000;
+	border:			1px dotted #ff0000;
+}
+
+a.nice:visited:hover {
+	text-decoration:	none;
+	background-color:	#bbeeff;
+	color:			#ff0000;
+	border:			1px dotted #ff0000;
+}
+
+a.nice:visited {
+	text-decoration:	none;
+	color:			#551a8b;
+}
+
+a.nice:link {
+	text-decoration:	none;
+	color:			#0000bb;
+}
+
+a.subtle {
+	text-decoration:	none;
+	background-color:	#ffffe0;
+	color:			#0000ef;
+}
+
+a.subtle:active {
+	text-decoration:	none;
+	background-color:	#ffffe0;
+	color:			#ff0000;
+}
+
+a.subtle:link:hover {
+	text-decoration:	none;
+	background-color:	#bbeeff;
+	color:			#ff0000;
+	border:			1px dotted #ff0000;
+}
+
+a.subtle:visited:hover {
+	text-decoration:	none;
+	background-color:	#bbeeff;
+	color:			#ff0000;
+	border:			1px dotted #ff0000;
+}
+
+a.subtle:visited {
+	text-decoration:	none;
+	background-color:	#ffffe0;
+	color:			#551a8b;
+}
+
+a.subtle:link {
+	text-decoration:	none;
+	background-color:	#ffffe0;
+	color:			#0000bb;
+}
+
+a.clean {
+	text-decoration:	none;
+	color:			#0000ef;
+/*	font-style:		italic; */
+}
+
+a.clean:hover {
+	text-decoration:	underline;
+	color:			#ff0000;
+	font-style:		italic;
+}
+
+a.nother:hover {
+	text-decoration:	none;
+	background:		#ffcc66;
+	color:			#ff0000;
+/*	cursor:			move; */
+	
+}
+
+a.choose {
+	text-decoration:	none;
+	color:			#0000ef;
+}
+
+a.choose:hover {
+	text-decoration:	none;
+	background:		#ffc054;
+	color:			#ff0000;
+/*	cursor:			move; */
+	
+}
+
+h1 {
+	color:			#191970;
+	font-size:		22px;
+}
+
+#event {
+	background-color:	#f5f5dc;
+	border:			thin solid #000099;
+	padding:		3px 3px 3px 3px;
+}
+
+#details {
+	float:			left;
+	width:			80%;
+	border-left:		thin solid #000099;
+	border-top:		thin solid #000099;
+	border-bottom:		thin solid #000099;
+	background:		#f5f5dc;
+	color:			#000000;
+}
+
+#schedule {
+	float:			right;
+	width:			20%;
+	border-right:		thin solid #000099;
+	border-top:		thin solid #000099;
+	border-bottom:		thin solid #000099;
+	background:		#f5f5dc;
+	color:			#000000;
+}
+
+/*************************
+ * Page or section types *
+ *************************/
+
+.center {margin:           1em auto;
+         text-align:       center;}
+
+.search {
+	background-color:	#eef7ff;	color:	#000000;
+}
+
+.error {
+	background-color:	#ffdddd;	color:	#000000;
+}
+
+.funds {
+	background-color:	#efefef;	color:	#000000;
+}
+
+.article {
+	background-color:	#eef7ff;	color:	#000000;
+}
+
+.brochure {
+	background-color:	#ffc054;	color:	#000000;
+}
+
+.mission {
+	background-color:	#ffffff;	color:	#005030;
+}
+
+.note {
+	background-color:	#ffffcc;	color:	#ff0000;
+}
+
+.newsletter {
+	background-color:	#ffdddd;	color:	#000000;
+	font-size:		22px;
+	font-weight:		bold;
+}
+
+.quicktoc {
+	font-size:		11px;
+}
+
+.email {
+	text-decoration:	underline;
+	color:			#0000ff;
+}
+
+.box {
+	background-color:	#f5f5dc;
+	color:			#000000;
+	border:			thin solid #000099;
+	padding:		3px 3px 3px 3px;
+}
+
+.new {
+	background-color:	#ffff00;
+	color:			#ff0000;
+	font-weight:		bold;
+}
+
+.faqtoc {
+	background-color:	#f0ffd2;
+	color:			#000000;
+	font-size:		11px;
+}
+
+.biblio {
+	margin:			auto auto auto 50px;
+	text-indent:		-50px;
+}
+
+.guideline {
+	border-bottom:		thin solid #000000;
+	border-top:		thin none  #ffffff;
+	border-left:		thin none  #ffffff;
+	border-right:		thin none  #ffffff;
+}
+
+.category {
+	color:			#408080;
+	font-weight:		bold;
+}
+
+.pubname {
+	font-weight:		bold;
+}
+
+.pubdate {
+	font-weight:		bold;
+	font-style:		italic;
+}
+
+.authors {
+	font-weight:		bold;
+	font-style:		italic;
+}
+
+.pubtype {
+	font-weight:		bold;
+}
+
+.footnote {
+	background-color:	#fafad2;
+	color:			#000000;
+	border:			thin solid #000099;
+	font-size:		11px;
+	width:			640px;
+	text-align:		center;
+}
+
+/*****************
+ * Form fill-ins *
+ *****************/
+
+.form {
+	background-color:	#eef7ff;
+	color:			#000000;
+	border:			thin solid #000099;
+}
+
+.required {
+	background-color:	#cccccc;
+	color:			#ff0000;
+	text-align:		center;
+}
+
+.optional {
+	background-color:	#eeeeee;
+	color:			#000000;
+	text-align:		left;
+}
+
+.button {
+	background-color:	#dbdbdb;
+	color:			#000000;
+	border:			outset;
+	border-width:		medium;
+	width:			100%;
+}
+
+/**********
+ * Status *
+ **********/
+
+.rejected {
+	background-color:	#ff9999;
+	color:			#999999;
+}
+
+.pending {
+	background-color:	#ffff99;
+	color:			#ff0000;
+}
+
+.accepted {
+	background-color:	#99ff99;
+	color:			#000000;
+}
+
+/*************************************************
+ * Miscellaneous colors used by DAWN.  Nice set. *
+ *************************************************/
+
+.dawn1 {
+	color:			#ffcc66;
+}
+
+.dawn2 {
+	color:			#00ff99;
+}
+
+.dawn3 {
+	color:			#6633ff;
+}
+
+.dawn4 {
+	color:			#ffffff;
+}
+
+.dawn5 {
+	color:			#ffff99;
+}
+
+.draft  {
+	background: url(smalldraft.png) fixed;
+}
+
+
+/************
+ * SOLD OUT *
+ ************/
+
+.soldout {
+	background-image:	url(sold-out.png);
+	background-position:	center;
+	background-repeat:	no-repeat;
+}
+
+div#soldout {
+	background-color:	#efefef;
+	background-image:	url(sold-out.png);
+	background-position:	200px 200px;
+	background-repeat:	no-repeat;
+	background-attachment:	fixed;
+	color:			#000000;
+}
+
+div#soldout {
+	position:		relative;
+	top:			0px;
+	left:			0px;
+	right:			0px;
+}
+
+div#soldout p {
+	background-color:	#efefef;
+	background-image:	url(sold-out.png);
+	background-position:	200px 200px;
+	background-repeat:	no-repeat;
+	background-attachment:	fixed;
+	color:			#000000;
+}
+
+div#soldout p {
+	position:		relative;
+	top:			0px;
+	left:			0px;
+	right:			0px;
+}
+
+td#soldout  {
+	background-color:	#efefef;
+	background-image:	url(sold-out.png);
+	background-position:	200px 200px;
+	background-repeat:	no-repeat;
+	background-attachment:	fixed;
+	color:			#000000;
+}
+
+td#soldout {
+	position:		relative;
+	top:			0px;
+	left:			0px;
+	right:			0px;
+}
+
+/************************************************************************
+ *    NAME: signature.css						*
+ *  AUTHOR: Kevin Cole <kevin.cole@gallaudet.edu>			*
+ *   WHERE: Gallaudet Research Institute, Washington, DC 2002		*
+ * LASTMOD: 2003.04.03							*
+ * PURPOSE: To make my signature look pretty.				*
+ *   USAGE: <html>							*
+ *	   <head>							*
+ *	   <link rel="stylesheet"					*
+ *		 type="text/css"					*
+ *		 href="signature.css" />				*
+ *	   ...								*
+ *									*
+ * Copyright (c) 2003 Kevin Cole <kevin.cole@gallaudet.edu>		*
+ ************************************************************************/
+
+.signature {
+	page-break-inside:	avoid;
+}
+
+.spanstyle {
+	position:		absolute;
+	visibility:		visible;
+	top:			-50px;
+	font-size:		16px;
+	font-weight:		bold;
+	color:			#ff0000;
+}
+
+.sighead {
+	background-color:	#ffffcc;
+	color:			#ff0000;
+}
+
+.sigbody {
+	background-color:	#eeffff;
+	color:			#000000;
+}
+
+.sigbig {
+	background-color:	#eeffff;
+	color:			#000000;
+	font-size:		22px;
+	font-weight:		bold;
+}
+
+.siglab {
+	background-color:	#eeffff;
+	color:			#000000;
+	font-weight:		bold;
+}
+
+.sigemph {
+	background-color:	#eeffff;
+	color:			#000000;
+	font-weight:		bold;
+	font-style:		italic;
+}
+
+.sigfoot {
+	background-color:	#eeffff;
+	color:			#000000;
+	font-size:		11px;
+	font-style:		italic;
+}
+
+/************************************************************************
+ *    NAME: code.css							*
+ *  AUTHOR: Kevin Cole <kevin.cole@gallaudet.edu>			*
+ *   WHERE: Gallaudet Research Institute, Washington, DC 20002-3695	*
+ * LASTMOD: 2001.08.20							*
+ * PURPOSE: This is the cascading style sheet (CSS) for coding examples	*
+ *	   taken from the styles and colors produced by enscript.	*
+ *   USAGE: <html>							*
+ *	   <head>							*
+ *	   <link rel="stylesheet"					*
+ *		 type="text/css"					*
+ *		 href="code.css" />					*
+ *	   ...								*
+ *									*
+ * Copyright (c) 2001 Kevin Cole <kevin.cole@gallaudet.edu>		*
+ ************************************************************************/
+
+.coverpage {
+	text-align:	center;
+}
+
+.important {
+	font-weight:	bold;
+}
+
+.citation {
+	font-weight:	bold;
+	font-style:	italic;
+}
+
+.comment {
+	color:		#b22222;
+	font-style:	italic;
+}
+
+.reserved {
+	color:		#a020f0;
+	font-weight:	bold;
+}
+
+.quoted {
+	color:		#bc8f8f;
+	font-weight:	bold;
+}
+
+.function {
+	color:		#0000ff;
+	font-weight:	bold;
+}
+
+.other {
+	color:		#000000;
+	font-weight:	normal;
+}
+
+.dim {
+	background-color:	#eeeeee;
+	color:			#000000;
+}
+
+.hilite {
+	background-color:	#ffffa0;
+	font-weight:		bold;
+}
+
+/************************************************************************
+ * Reformatting elements to handle weirdness of screen vs. print.       *
+ ************************************************************************/
+.screen			{display:	block;}
+.print			{display:	none;}
